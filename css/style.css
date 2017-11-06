@@ -1,0 +1,148 @@
+body{
+	font-size: 15px;
+	font-family: arial, sans-serif;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+	color: #424242;
+}
+#head{
+	margin-bottom: 50px;
+}
+.maincontainer{
+	width: 70%;
+	margin: auto;
+	height: 1100px;
+	background: #ffffff;
+	box-shadow: 0px 8px 8px #888888;
+	padding: 0;
+}
+#main{
+	margin: auto;
+	width: 95%;
+}/*
+.left{
+	border: 1px #888888 solid; 
+}*/
+/*#showcase{
+	min-height: 400px;
+	background: url(../img/showcase2.jpg) no-repeat -170px -170px;
+	background-size: 1500px;
+	text-align: center;
+	color: #ffffff;
+	margin: auto;
+}*/
+#slide{
+	margin: auto;
+}
+#showcase img{
+	width: 100%;
+	max-height: 400px;
+}
+#showcase{
+	width: 100%;
+}
+#setters{
+	background: #180426;
+	width: 100%;
+	margin: auto;
+	line-height: 20px;
+	padding: 15px;
+	padding-left: 30px;
+	font-family: arial;
+	border-bottom: #e8491d solid 4px;
+}
+.highlightorange{
+	color: #e8491d;
+	font-weight: bold;
+}
+#setters h1{
+	color: #f7f7f7;
+	font-size: 15px;
+}
+.main{
+	padding-top: 15px;
+	min-height: 400px;
+}
+.left{
+	float: left;
+	width: 75%;
+	text-align: justify;
+	border: #e0e0e0 solid 1px;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+.right{
+	float: right;
+	margin-bottom: 5px;
+	width: 23%;
+	text-align: justify;
+	text-align: center;
+	padding: 0 10px 0 10px;
+	border: #e0e0e0 solid 1px;
+}
+.highlightblue{
+	font-size: 17px;
+	font-weight: bold;
+	color: #180426;
+}
+.right li{
+	text-align: left;
+	color: #424242;
+}
+.btn-main{
+	width: 50%;
+	margin-bottom: 7px;
+	background: #180426; /*blue*/
+	box-shadow: 0px 2px 2px #888888;
+	color: #ffffff;
+	border: none;
+	height: 30px;
+}
+.btn-main:hover{
+	/*background: #527bbf;*/
+	cursor: pointer;
+}
+.prob_title{
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.prob_inside{
+	font-size: 15px;
+	font-weight: bold;
+}
+.problems{
+	font-size: 12px;
+	text-align: center;
+	border: none;
+	background: #ffffff;
+	padding: 5px;
+}
+.problems th{
+	padding: 10px;
+	border: #180426 solid 1px;
+	background: #180426;
+	color: #ffffff;
+}
+.problems .col{
+	padding: 10px;
+	width: 200px;
+	border: none;
+	box-shadow: 0px 2px 2px #888888;
+}
+.problems a{
+	text-decoration: none;
+}
+.problems td:hover{
+	color: #5773ba;
+}
+.dp{
+	float: left;
+	width: 70%;
+	height: auto;
+}
+.dp img{
+	width: 150px;
+}
