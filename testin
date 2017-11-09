@@ -1,0 +1,1 @@
+insert into RegisteredUsers (FNAME, LNAME, HANDLE, INSTITUTION, PASSWORD) values ('Blaire', 'Spinetti', 'bspinettid', 'InnoZ', '9aZPaOgiV');
