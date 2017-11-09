@@ -29,20 +29,18 @@
 		?>
 	</section>
 	<section>
-	<div class="maincontainer" style="height: 500px;">
+	<div class="maincontainer" style="height: 800px;">
 		
 		
 		<section id="main">
 			<div class="main">
 				<article class="left">
-				<p>
-					<h3><span class="highlightblue">All Problems</span></h3>
-				</p>
 					<?php
 						$conn=mysqli_connect("localhost","root","","Project");
 						$result = mysqli_query($conn,"SELECT * FROM Problems");
 						// echo '<div class="table>"';
 							echo "<table class='problems' border='1'>
+							<caption><h3><span class=\"highlightblue\">All Problems</span></h3></caption>
 							<tr>
 							<th>Problem ID</th>
 							<th>Problem Name</th>
@@ -51,7 +49,6 @@
 							</tr>";
 							while($row = mysqli_fetch_array($result))
 							{
-							$handle = $_SESSION["user"];
 							$ID = $row['PROB_ID'];
 
 							$Total = "SELECT * FROM Submissions WHERE PROB_ID = $ID";
@@ -73,13 +70,17 @@
 							echo '<td class="col"><a href="'.$row['PROB_ID'].'.php">' .$row['PROB_NAME']. '</a></td>';
 							echo "<td class=\"col\"> $Successful </td>";
 							echo "<td class=\"col\"> $Accuracy </td>";
-							$isSolved = "SELECT * FROM Submissions WHERE HANDLE='$handle' AND STATUS='AC' AND PROB_ID = $ID";
-							$isSolved = mysqli_query($conn,$isSolved);
-							$isSolved = mysqli_num_rows($isSolved);
-							if($isSolved>0){
-								echo "<td class=\"solved\"> Solved </td>";
-							}
-							echo "</tr>";
+
+							if(isset($_SESSION["user"])){
+								$handle = $_SESSION["user"];
+								$isSolved = "SELECT * FROM Submissions WHERE HANDLE='$handle' AND STATUS='AC' AND PROB_ID = $ID";
+								$isSolved = mysqli_query($conn,$isSolved);
+								$isSolved = mysqli_num_rows($isSolved);
+								if($isSolved>0){
+									echo "<td class=\"solved\"> Solved </td>";
+								}
+								echo "</tr>";
+								}
 							}
 							echo "</table>";
 						// echo '</div>';

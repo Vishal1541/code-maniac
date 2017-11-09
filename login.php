@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<!-- <?php
-	$host="localhost";
-	$username="root";
-	$password="Vishal123";
-
-	mysql_connect($host,$username,"") or die("connection unsuccessful");
-
-	echo "connection success";
-?> -->
 <html>
 <head>
 	<title>ADP Project | Login</title>

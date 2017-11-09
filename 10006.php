@@ -18,66 +18,80 @@
 			include "header.php";
 		?>
 	</section>
-	<div class="maincontainer" style="height: 1000px;">
+	<div class="maincontainer" style="height: 750px;">
 		
 		
 		<section id="main">
 			<div class="main">
 				<article class="left">
 					<div class="prob_title">
-					10001. Watermelon
+					10006. Domino Piling.
 					</div>
 					<p>
-						One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the biggest and the ripest one, in their opinion. After that the watermelon was weighed, and the scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry, however they faced a hard problem.
+						You are given a rectangular board of M × N squares. Also you are given an unlimited number of standard domino pieces of 2 × 1 squares. You are allowed to rotate the pieces.
 					</p>
 					<p>
-						Pete and Billy are great fans of even numbers, that's why they want to divide the watermelon in such a way that each of the two parts weighs even number of kilos, at the same time it is not obligatory that the parts are equal. The boys are extremely tired and want to start their meal as soon as possible, that's why you should help them and find out, if they can divide the watermelon in the way they want. For sure, each of them should get a part of positive weight.
+						 You are asked to place as many dominoes as possible on the board so as to meet the following conditions:
 					</p>
+					<p>
+						1. Each domino completely covers two squares.
+					</p>
+					<p>
+						2. No two dominoes overlap.
+					</p>
+					<p>
+						3. Each domino lies entirely inside the board. It is allowed to touch the edges of the board.
+					</p>
+					<p>
+						Find the maximum number of dominoes, which can be placed under these restrictions
+					</p>    
 					<div class="prob_inside">
 						Input
 					</div>
 					<p>
-						The first (and the only) input line contains integer number w (1 ≤ w ≤ 100) — the weight of the watermelon bought by the boys.
+						In a single line you are given two integers M and N — board sizes in squares (1 ≤ M ≤ N ≤ 16).
 					</p>
 					<div class="prob_inside">
 						Output
 					</div>
 					<p>
-						Print YES, if the boys can divide the watermelon into two parts, each of them weighing even number of kilos; and NO in the opposite case.
+						Output one number — the maximal number of dominoes, which can be placed.
 					</p>
 					<div class="prob_inside">
 						Examples:
 					</div>
 					<div class="prob_inside">
-						i/p
+						Input
 					</div>
 					<p>
-						8
+						2 4
 					</p>
 					<div class="prob_inside">
-						o/p
+						Output
 					</div>
 					<p>
-						YES
+						4
 					</p>
-				
-				<?php
-					if(isset($_SESSION["user"])){
-								include "code_editor.php";
-						echo '
-							<form class="submit_form" action="#">
-								<input type="submit" name="10001" class="submit_query">
-							</form>';
-					}
-				?>
+
+					<div class="prob_inside">
+						Input
+					</div>
+					<p>
+						3 3
+					</p>
+					<div class="prob_inside">
+						Output
+					</div>
+					<p>
+						4
+					</p>
 				</article>
 				<aside class="right">
-					<div class="prob_title">Constraints</div>
 					<ol>
 						<li>time limit per test - 1s</li>
 						<li>64 megabytes</li>
-						<li>input - standard input</li>
-						<li>output - standard output</li>
+						<li>input - standard input (stdin)</li>
+						<li>output - standard output (stdout)</li>
 					</ol>
 				</aside>
 			</div>

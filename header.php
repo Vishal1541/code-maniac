@@ -10,7 +10,7 @@
 				<!-- <h1><span class="highlight">ADP</span> Project</h1>				 -->
 				<img src="./img/LOGO3.png">
 			</div>
-			<nav>
+			<nav class="navbar">
 				<ul>
 					<li ><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
