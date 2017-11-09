@@ -18,66 +18,69 @@
 			include "header.php";
 		?>
 	</section>
-	<div class="maincontainer" style="height: 1000px;">
+	<div class="maincontainer" style="height: 700px;">
 		
 		
 		<section id="main">
 			<div class="main">
 				<article class="left">
 					<div class="prob_title">
-					10001. Watermelon
+					10010. Football.
 					</div>
 					<p>
-						One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the biggest and the ripest one, in their opinion. After that the watermelon was weighed, and the scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry, however they faced a hard problem.
+						Petya loves football very much. One day, as he was watching a football match, he was writing the players' current positions on a piece of paper. To simplify the situation he depicted it as a string consisting of zeroes and ones. 
 					</p>
 					<p>
-						Pete and Billy are great fans of even numbers, that's why they want to divide the watermelon in such a way that each of the two parts weighs even number of kilos, at the same time it is not obligatory that the parts are equal. The boys are extremely tired and want to start their meal as soon as possible, that's why you should help them and find out, if they can divide the watermelon in the way they want. For sure, each of them should get a part of positive weight.
+						A zero corresponds to players of one team; a one corresponds to players of another team. If there are at least 7 players of some team standing one after another, then the situation is considered dangerous. 
 					</p>
+					<p>
+						For example, the situation 00100110111111101 is dangerous and 11110111011101 is not. You are given the current situation. Determine whether it is dangerous or not.
+					</p>   
 					<div class="prob_inside">
 						Input
 					</div>
 					<p>
-						The first (and the only) input line contains integer number w (1 ≤ w ≤ 100) — the weight of the watermelon bought by the boys.
+					The first input line contains a non-empty string consisting of characters "0" and "1", which represents players. The length of the string does not exceed 100 characters. There's at least one player from each team present on the field.
 					</p>
 					<div class="prob_inside">
 						Output
 					</div>
 					<p>
-						Print YES, if the boys can divide the watermelon into two parts, each of them weighing even number of kilos; and NO in the opposite case.
+						Print "YES" if the situation is dangerous. Otherwise, print "NO".
 					</p>
 					<div class="prob_inside">
 						Examples:
 					</div>
 					<div class="prob_inside">
-						i/p
+						Input
 					</div>
 					<p>
-						8
+						001001
 					</p>
 					<div class="prob_inside">
-						o/p
+						Output
+					</div>
+					<p>
+						NO
+					</p>
+
+					<div class="prob_inside">
+						Input
+					</div>
+					<p>1000000001</p>
+					<div class="prob_inside">
+						Output
 					</div>
 					<p>
 						YES
 					</p>
-				
-				<?php
-					if(isset($_SESSION["user"])){
-								include "code_editor.php";
-						echo '
-							<form class="submit_form" action="#">
-								<input type="submit" name="10001" class="submit_query">
-							</form>';
-					}
-				?>
 				</article>
 				<aside class="right">
-					<div class="prob_title">Constraints</div>
 					<ol>
 						<li>time limit per test - 1s</li>
 						<li>64 megabytes</li>
-						<li>input - standard input</li>
-						<li>output - standard output</li>
+						<li>input - standard input (stdin)</li>
+						<li>output - standard output (stdout)</li>
 					</ol>
 				</aside>
 			</div>

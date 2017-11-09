@@ -18,66 +18,56 @@
 			include "header.php";
 		?>
 	</section>
-	<div class="maincontainer" style="height: 1000px;">
+	<div class="maincontainer" style="height: 580px;">
 		
 		
 		<section id="main">
 			<div class="main">
 				<article class="left">
 					<div class="prob_title">
-					10001. Watermelon
+					10002. Theatre Square
 					</div>
 					<p>
-						One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the biggest and the ripest one, in their opinion. After that the watermelon was weighed, and the scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry, however they faced a hard problem.
+						Theatre Square in the capital city of Berland has a rectangular shape with the size n × m meters. On the occasion of the city's anniversary, a decision was taken to pave the Square with square granite flagstones. Each flagstone is of the size a × a.
 					</p>
 					<p>
-						Pete and Billy are great fans of even numbers, that's why they want to divide the watermelon in such a way that each of the two parts weighs even number of kilos, at the same time it is not obligatory that the parts are equal. The boys are extremely tired and want to start their meal as soon as possible, that's why you should help them and find out, if they can divide the watermelon in the way they want. For sure, each of them should get a part of positive weight.
+						What is the least number of flagstones needed to pave the Square? It's allowed to cover the surface larger than the Theatre Square, but the Square has to be covered. It's not allowed to break the flagstones. The sides of flagstones should be parallel to the sides of the Square.
 					</p>
 					<div class="prob_inside">
 						Input
 					</div>
 					<p>
-						The first (and the only) input line contains integer number w (1 ≤ w ≤ 100) — the weight of the watermelon bought by the boys.
+						The input contains three positive integer numbers in the first line: n,  m and a (1 ≤  n, m, a ≤ 109).
 					</p>
 					<div class="prob_inside">
 						Output
 					</div>
 					<p>
-						Print YES, if the boys can divide the watermelon into two parts, each of them weighing even number of kilos; and NO in the opposite case.
+						Print the needed number of flagstones.
 					</p>
 					<div class="prob_inside">
 						Examples:
 					</div>
 					<div class="prob_inside">
-						i/p
+						Input
 					</div>
 					<p>
-						8
+						6 6 4
 					</p>
 					<div class="prob_inside">
-						o/p
+						Output
 					</div>
 					<p>
-						YES
+						4
 					</p>
-				
-				<?php
-					if(isset($_SESSION["user"])){
-								include "code_editor.php";
-						echo '
-							<form class="submit_form" action="#">
-								<input type="submit" name="10001" class="submit_query">
-							</form>';
-					}
-				?>
+					
 				</article>
 				<aside class="right">
-					<div class="prob_title">Constraints</div>
 					<ol>
 						<li>time limit per test - 1s</li>
 						<li>64 megabytes</li>
-						<li>input - standard input</li>
-						<li>output - standard output</li>
+						<li>input - standard input (stdin)</li>
+						<li>output - standard output (stdout)</li>
 					</ol>
 				</aside>
 			</div>

@@ -18,66 +18,89 @@
 			include "header.php";
 		?>
 	</section>
-	<div class="maincontainer" style="height: 1000px;">
+	<div class="maincontainer" style="height: 850px;">
 		
 		
 		<section id="main">
 			<div class="main">
 				<article class="left">
 					<div class="prob_title">
-					10001. Watermelon
+					10005. String Task.
 					</div>
 					<p>
-						One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the biggest and the ripest one, in their opinion. After that the watermelon was weighed, and the scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry, however they faced a hard problem.
-					</p>
+						Petya started to attend programming lessons. On the first lesson his task was to write a simple program. The program was supposed to do the following: in the given string, consisting if uppercase and lowercase Latin letters, it:
+
+					    deletes all the vowels,
+					    inserts a character "." before each consonant,
+					    replaces all uppercase consonants with corresponding lowercase ones. 
+					</p>    
+					<p>    
+						Vowels are letters "A", "O", "Y", "E", "U", "I", and the rest are consonants. The program's input is exactly one string, it should return the output as a single string, resulting after the program's processing the initial string.
+					</p>	
 					<p>
-						Pete and Billy are great fans of even numbers, that's why they want to divide the watermelon in such a way that each of the two parts weighs even number of kilos, at the same time it is not obligatory that the parts are equal. The boys are extremely tired and want to start their meal as soon as possible, that's why you should help them and find out, if they can divide the watermelon in the way they want. For sure, each of them should get a part of positive weight.
+					Help Petya cope with this easy task.
 					</p>
 					<div class="prob_inside">
 						Input
 					</div>
 					<p>
-						The first (and the only) input line contains integer number w (1 ≤ w ≤ 100) — the weight of the watermelon bought by the boys.
+						The first line represents input string of Petya's program. This string only consists of uppercase and lowercase Latin letters and its length is from 1 to 100, inclusive.
 					</p>
 					<div class="prob_inside">
 						Output
 					</div>
 					<p>
-						Print YES, if the boys can divide the watermelon into two parts, each of them weighing even number of kilos; and NO in the opposite case.
+						Print the resulting string. It is guaranteed that this string is not empty.
 					</p>
 					<div class="prob_inside">
 						Examples:
 					</div>
 					<div class="prob_inside">
-						i/p
+						Input
 					</div>
 					<p>
-						8
+						tour
 					</p>
 					<div class="prob_inside">
-						o/p
+						Output
 					</div>
 					<p>
-						YES
+						.t.r
 					</p>
-				
-				<?php
-					if(isset($_SESSION["user"])){
-								include "code_editor.php";
-						echo '
-							<form class="submit_form" action="#">
-								<input type="submit" name="10001" class="submit_query">
-							</form>';
-					}
-				?>
+
+					<div class="prob_inside">
+						Input
+					</div>
+					<p>
+						Codeforces
+					</p>
+					<div class="prob_inside">
+						Output
+					</div>
+					<p>
+						.c.d.f.r.c.s
+					</p>
+
+					<div class="prob_inside">
+						Input
+					</div>
+					<p>
+						aBAcAba
+					</p>
+					<div class="prob_inside">
+						Output
+					</div>
+					<p>
+						.b.c.b
+					</p>
+					
 				</article>
 				<aside class="right">
-					<div class="prob_title">Constraints</div>
 					<ol>
 						<li>time limit per test - 1s</li>
 						<li>64 megabytes</li>
-						<li>input - standard input</li>
-						<li>output - standard output</li>
+						<li>input - standard input (stdin)</li>
+						<li>output - standard output (stdout)</li>
 					</ol>
 				</aside>
 			</div>

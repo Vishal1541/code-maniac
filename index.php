@@ -34,7 +34,7 @@
 		</section>
 		<section id="setters">
 			<div id="div-setters">
-				<h1><span class="highlightorange">Problem Setters:</span> Vishal Anand | Yash Agrawal | <span class="highlightorange">Problem Tester:</span> Akhilesh Devrari | 
+				<h1><span class="highlightorange">Problem Setters:</span> Vishal Anand | Yash Agrawal | <span class="highlightorange">Problem Tester:</span> Aman Khandewal | 
 					<span class="highlightorange">Editorialist:</span> Aashish Kumar | Vishal Anand</h1>
 			</div>
 		

@@ -18,66 +18,75 @@
 			include "header.php";
 		?>
 	</section>
-	<div class="maincontainer" style="height: 1000px;">
+	<div class="maincontainer" style="height: 900px;">
 		
 		
 		<section id="main">
 			<div class="main">
 				<article class="left">
 					<div class="prob_title">
-					10001. Watermelon
+					10007. Team.
 					</div>
 					<p>
-						One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the biggest and the ripest one, in their opinion. After that the watermelon was weighed, and the scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry, however they faced a hard problem.
+						One day three best friends Petya, Vasya and Tonya decided to form a team and take part in programming contests. Participants are usually offered several problems during programming contests. Long before the start the friends decided that they will implement a problem if at least two of them are sure about the solution. Otherwise, the friends won't write the problem's solution.
 					</p>
 					<p>
-						Pete and Billy are great fans of even numbers, that's why they want to divide the watermelon in such a way that each of the two parts weighs even number of kilos, at the same time it is not obligatory that the parts are equal. The boys are extremely tired and want to start their meal as soon as possible, that's why you should help them and find out, if they can divide the watermelon in the way they want. For sure, each of them should get a part of positive weight.
-					</p>
+						This contest offers n problems to the participants. For each problem we know, which friend is sure about the solution. Help the friends find the number of problems for which they will write a solution.
+					</p>    
 					<div class="prob_inside">
 						Input
 					</div>
 					<p>
-						The first (and the only) input line contains integer number w (1 ≤ w ≤ 100) — the weight of the watermelon bought by the boys.
+						The first input line contains a single integer n (1 ≤ n ≤ 1000) — the number of problems in the contest.
+					</p>
+					<p>
+						 Then n lines contain three integers each, each integer is either 0 or 1. If the first number in the line equals 1, then Petya is sure about the problem's solution, otherwise he isn't sure.
+					</p>
+					<p>
+						  The second number shows Vasya's view on the solution, the third number shows Tonya's view. The numbers on the lines are separated by spaces.
 					</p>
 					<div class="prob_inside">
 						Output
 					</div>
 					<p>
-						Print YES, if the boys can divide the watermelon into two parts, each of them weighing even number of kilos; and NO in the opposite case.
+						Print a single integer — the number of problems the friends will implement on the contest.
 					</p>
 					<div class="prob_inside">
 						Examples:
 					</div>
 					<div class="prob_inside">
-						i/p
+						Input
 					</div>
 					<p>
-						8
+						3
+					</p>
+					<p>1 1 0</p>	
+					<p>1 1 1</p>
+					<p>1 0 0</p>
+					<div class="prob_inside">
+						Output
+					</div>
+					<p>
+						2
 					</p>
 					<div class="prob_inside">
-						o/p
+						Input
 					</div>
-					<p>
-						YES
-					</p>
-				
-				<?php
-					if(isset($_SESSION["user"])){
-								include "code_editor.php";
-						echo '
-							<form class="submit_form" action="#">
-								<input type="submit" name="10001" class="submit_query">
-							</form>';
-					}
-				?>
+					<p>2</p>
+					<p>1 0 0</p>
+					<p>0 1 1</p>
+					<div class="prob_inside">
+						Output
+					</div>
+					<p>1</p>
+			
 				</article>
 				<aside class="right">
-					<div class="prob_title">Constraints</div>
 					<ol>
 						<li>time limit per test - 1s</li>
 						<li>64 megabytes</li>
-						<li>input - standard input</li>
-						<li>output - standard output</li>
+						<li>input - standard input (stdin)</li>
+						<li>output - standard output (stdout)</li>
 					</ol>
 				</aside>
 			</div>
