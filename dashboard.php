@@ -15,21 +15,31 @@
 <style>
 .skill_container{
 	border: none;
+	display: flex;
 	box-shadow: 0px 0px 1px #888888;
 	background: #f8f8f8;
-	width: 90%;
-	line-height: 40px;
-	margin-left: 23px;
-	margin-bottom: 5px;
+	justify-content: space-between;
+	/*width: 90%;*/
+	line-height: 20px;
+	/flex-wrap: nowrap;
+	margin-bottom: 10px;
 }
-.skillbar{
-	width: 90%;
-	background-color: #ddd;
-	text-align: right;
-	padding-right: 10px;
-	line-height: 40px;
+.skill_bar_container{
+	padding-bottom: 0px;
+	/*float: left;*/
+	width: 85%;
+	display:inline;
+	background-color: transparent;
+	padding-right: 0px;
+	line-height: 30px;
 	color: #ffffff;
 	font-size: 10px;
+}
+.skill{
+
+}
+.skillbar{
+	
 }
 </style>
 <body>
@@ -69,15 +79,21 @@
 						$TLE = "SELECT * FROM Submissions WHERE HANDLE='$handle' AND STATUS='TLE'";
 						$TLE = mysqli_query($conn,$TLE);
 						$TLE = mysqli_num_rows($TLE);
+						if($total>0){
+							$accuracy = ($AC/$total)*100;
+							$accuracy = (round($accuracy,2));
 
-						$accuracy = ($AC/$total)*100;
-						$accuracy = (round($accuracy,2));
+							$tle_per = ($TLE/$total)*100;
+							$tle_per = (round($tle_per,2));
 
-						$tle_per = ($TLE/$total)*100;
-						$tle_per = (round($tle_per,2));
-
-						$wa_per = ($WA/$total)*100;
-						$wa_per = (round($wa_per,2));
+							$wa_per = ($WA/$total)*100;
+							$wa_per = (round($wa_per,2));
+						}
+						else{
+							$accuracy = 0;
+							$tle_per = 0;
+							$wa_per = 0;
+						}
 
 						echo "<div style=\"color: #180426; font-weight: bold; font-size: 50px;\">Welcome $handle</div>";
 						echo "<div style=\"color: #ff5900; font-size: 15px;\">$institution</div><br>";
@@ -103,15 +119,18 @@
 							</table>
 						";
 						echo'<div class="skill_container">';
-						echo '<div class="skillbar" style="width: '.$accuracy.'%; background-color: #4CAF50;"> Accuracy = '.$accuracy.'% </div>';
+						echo '<div class="skill">AC = '.$accuracy.'%</div>';
+						echo '<div class="skill_bar_container"><div class="skillbar" style="width: '.$accuracy.'%; background-color: #4CAF50;">.</div></div>';
 						echo'</div>';
 
 						echo'<div class="skill_container">';
-						echo '<div class="skillbar" style="width: '.$wa_per.'%; background-color: #cc0808;"> WA = '.$wa_per.'% </div>';
+						echo '<div class="skill">WA = '.$wa_per.'%</div>';
+						echo '<div class="skill_bar_container"><div class="skillbar" style="width: '.$wa_per.'%; background-color: #cc0808;">.</div></div>';
 						echo'</div>';
 
 						echo'<div class="skill_container">';
-						echo '<div class="skillbar" style="width: '.$tle_per.'%; background-color: #cca807;"> TLE = '.$tle_per.'% </div>';
+						echo '<div class="skill">TLE = '.$tle_per.'%</div>';
+						echo '<div class="skill_bar_container"><div class="skillbar" style="width: '.$tle_per.'%; background-color: #cca807;">.</div></div>';
 						echo'</div>';
 
 					?>

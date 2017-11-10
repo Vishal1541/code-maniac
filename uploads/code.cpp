@@ -6,7 +6,7 @@ int main(){
 int a;
 for(int i=0; i<5; i++){
 	cin>>a;
-	cout<<(a%2?"YES\n":"NO\n");
+	cout<<(a%2==0?"YES\n":"NO\n");
 }
 return 0;
 }

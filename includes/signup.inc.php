@@ -28,8 +28,8 @@
 		// }
 		$sql = "INSERT INTO RegisteredUsers VALUES('$fname','$lname','$handle','$institution','$password')";
 		mysqli_query($conn,$sql);
-		$sql_create = "CREATE TABLE $handle(SUBM_NO INT NOT NULL PRIMARY KEY AUTO_INCREMENT, PROB_ID INT(5) NOT NULL, VERDICT INT(1) NOT NULL)";
-		mysqli_query($conn,$sql_create);
+		// $sql_create = "CREATE TABLE $handle(SUBM_NO INT NOT NULL PRIMARY KEY AUTO_INCREMENT, PROB_ID INT(5) NOT NULL, VERDICT INT(1) NOT NULL)";
+		// mysqli_query($conn,$sql_create);
 		header("Location: ../index.php?signup=success");
 
 		exit();
