@@ -18,7 +18,7 @@
 			include "header.php";
 		?>
 	</section>
-	<div class="maincontainer" style="height: 1000px;">
+	<div class="maincontainer" style="height: 700px;">
 		
 		
 		<section id="main">
@@ -62,12 +62,8 @@
 					</p>
 				
 				<?php
-					if(isset($_SESSION["user"])){
-								include "code_editor.php";
-						echo '
-							<form class="submit_form" action="#">
-								<input type="submit" name="10001" class="submit_query">
-							</form>';
+					if(isset($_SESSION["user"])){						
+						include 'submit_button.php';
 					}
 				?>
 				</article>

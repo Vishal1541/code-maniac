@@ -22,7 +22,7 @@ int main(){
 		}
 		idx++;
 		while(line[idx]!='\'')	handle += line[idx++];
-		times = rand()%30;
+		times = rand()%5;
 		while(times--){
 			rand_id  = rand()%20;
 			rand_status = rand()%3;
