@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="competitive programmming, coding challenge, programmming problems">
 	<meta name="author" content="Vishal Anand">
-
+	<script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
 </head>
 <body>
 	<section id="head">
@@ -27,10 +27,17 @@
 				Paste and Submit your code here:
 				</div>		
 				<div class="code_editor">
-					<form name="submit_form" action="./uploads/submit.inc.php" method="POST">
-						<textarea name= "code_editor" class="codeEditor" cols="100" rows="25">
-							
-						</textarea><br>
+					<form name="submit_form"  	action="./uploads/submit.inc.php" method="POST">
+						<div class="wrapper">
+							  <code id="ace-editorid">#include "iostream"
+int main(){
+	cout<<"Hello World\n";
+	return 0;
+}</code>
+						</div>  
+						<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+						<script src='http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js'></script>
+						<script  src="./css/script.js"></script>
 						Type the Problem ID: <input type="text" name="probId">
 						<input type="submit" name="b_code_submit" class="submit_query">
 					</form>
