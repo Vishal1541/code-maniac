@@ -89,6 +89,7 @@ body{
 }
 .right li{
 	text-align: left;
+	margin-left: 10px;
 	color: #424242;
 }
 .btn-main{

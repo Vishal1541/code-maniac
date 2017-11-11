@@ -28,16 +28,25 @@
 				</div>		
 				<div class="code_editor">
 					<form name="submit_form"  	action="./uploads/submit.inc.php" method="POST">
-						<div class="wrapper">
-							  <code id="ace-editorid">#include "iostream"
+						<div class="wrapper"><!-- 
+							  	<code id="ace-editorid">#include "iostream"
 int main(){
-	cout<<"Hello World\n";
-	return 0;
-}</code>
+cout<<"Hello World\n";
+return 0;
+}								</code>
+								<textarea id="new_textarea" name="code_editor" style="display: none;"></textarea>
 						</div>  
+						<script>
+							document.getElementById("ace-editorid").oninput = function(){ 
+								document.getElementById("new_textarea").innerText = document.getElementById("ace-editorid").innerHTML;
+							}
+						</script>
 						<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 						<script src='http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js'></script>
-						<script  src="./css/script.js"></script>
+						<script  src="./css/script.js"></script> -->
+						<textarea name="new_textarea" cols="100" rows="25">
+							
+						</textarea><br>
 						Type the Problem ID: <input type="text" name="probId">
 						<input type="submit" name="b_code_submit" class="submit_query">
 					</form>

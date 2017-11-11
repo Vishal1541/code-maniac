@@ -36,7 +36,7 @@
 	font-size: 10px;
 }
 .skill{
-
+	font-size: 10px;
 }
 .skillbar{
 	

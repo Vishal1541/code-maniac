@@ -15,8 +15,7 @@
 					<li ><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
 					<li><a href="probl.php">Problem Sets</a></li>
-					<li><a href="rating.php">Rating Mechanism</a></li>
-					<li><a href="faqs.php">FAQs</a></li>
+					<li><a href="rankings.php">Rankings</a></li>
 					<?php
 						if(isset($_SESSION["user"])){
 							$user = $_SESSION["name"];

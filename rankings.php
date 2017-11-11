@@ -7,6 +7,9 @@
     color: #1e9120;
     font-weight: bold;
 }
+.col_same{
+	background: #ede5e1;
+}
 </style>
 <!DOCTYPE html>
 <html>
@@ -37,51 +40,59 @@
 				<article class="left">
 					<?php
 						$conn=mysqli_connect("localhost","root","","Project");
-						$result = mysqli_query($conn,"SELECT * FROM Problems");
+						$result = mysqli_query($conn,"SELECT DISTINCT(HANDLE) USER_HANDLE, COUNT(STATUS) AC FROM Submissions WHERE STATUS=\"AC\" GROUP BY HANDLE ORDER BY AC DESC");
 						// echo '<div class="table>"';
 							echo "<table class='problems' border='1'>
-							<caption><h3><span class=\"highlightblue\">All Problems</span></h3></caption>
+							<caption><h3><span class=\"highlightblue\">Rankings</span></h3></caption>
 							<tr>
-							<th>Problem ID</th>
-							<th>Problem Name</th>
+							<th>Rank #</th>
+							<th>Handle</th>
+							<th>Name</th>
+							<th>Institution</th>
 							<th>Successful Sumbissions</th>
-							<th>Accuracy</th>
 							</tr>";
+							$rank = 1;
 							while($row = mysqli_fetch_array($result))
 							{
-							$ID = $row['PROB_ID'];
+							$handle = $row['USER_HANDLE'];
 
-							$Total = "SELECT * FROM Submissions WHERE PROB_ID = $ID";
-							$Total = mysqli_query($conn,$Total);
-							$Total = mysqli_num_rows($Total);
+							$name = mysqli_query($conn,"SELECT * FROM RegisteredUsers WHERE HANDLE = \"".$handle."\"");
+							$name = mysqli_fetch_array($name);
+							$name = $name['FNAME'];
 
-							$Successful = "SELECT * FROM Submissions WHERE STATUS='AC' AND PROB_ID = $ID";
-							$Successful = mysqli_query($conn,$Successful);
-							$Successful = mysqli_num_rows($Successful);
-							if($Successful<1){
-								$Accuracy = 0;
-							}
-							else{
-								$Accuracy = ($Successful/$Total)*100;
-								$Accuracy = (round($Accuracy,2));
-							}
+							$institution = mysqli_query($conn,"SELECT * FROM RegisteredUsers WHERE HANDLE = \"".$handle."\"");
+							$institution = mysqli_fetch_array($institution);
+
+							$institution = $institution['INSTITUTION'];
+							$Successful = $row['AC'];
 
 							echo "<tr>";
-							echo '<td class="col"><a href="'.$row['PROB_ID'].'.php">' .$row['PROB_ID']. '</a></td>';
-							echo '<td class="col"><a href="'.$row['PROB_ID'].'.php">' .$row['PROB_NAME']. '</a></td>';
-							echo "<td class=\"col\"> $Successful </td>";
-							echo "<td class=\"col\"> $Accuracy </td>";
 
-							if(isset($_SESSION["user"])){
-								$handle = $_SESSION["user"];
-								$isSolved = "SELECT * FROM Submissions WHERE HANDLE='$handle' AND STATUS='AC' AND PROB_ID = $ID";
-								$isSolved = mysqli_query($conn,$isSolved);
-								$isSolved = mysqli_num_rows($isSolved);
-								if($isSolved>0){
-									echo "<td class=\"solved\"> Solved </td>";
+							if(isset($_SESSION['user'])){
+								$user = $_SESSION['user'];
+								if(strcmp($user,$handle)==0){
+									echo '<td class="col col_same">'.$rank.'</td>';
+									echo '<td class="col col_same">'.$handle.'</td>';
+									echo '<td class="col col_same">'.$name.'</td>';
+									echo '<td class="col col_same">'.$institution.'</td>';
+									echo '<td class="col col_same">'.$Successful.'</td>';
 								}
-								echo "</tr>";
+								else{
+									echo '<td class="col">'.$rank.'</td>';
+									echo '<td class="col">'.$handle.'</td>';
+									echo '<td class="col">'.$name.'</td>';
+									echo '<td class="col">'.$institution.'</td>';
+									echo '<td class="col">'.$Successful.'</td>';
 								}
+							}
+							else{
+								echo '<td class="col">'.$rank.'</td>';
+								echo '<td class="col">'.$handle.'</td>';
+								echo '<td class="col">'.$name.'</td>';
+								echo '<td class="col">'.$institution.'</td>';
+								echo '<td class="col">'.$Successful.'</td>';
+							}
+							$rank = $rank + 1;
 							}
 							echo "</table>";
 						// echo '</div>';

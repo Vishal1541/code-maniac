@@ -4,7 +4,7 @@
 		$id = $id."\n";
 		file_put_contents('probId', $id);
 		$id = $_POST["probId"];
-		$code = $_POST["code_editor"];
+		$code = $_POST["new_textarea"];
 		$newFile = fopen("code.cpp","w");
 		fwrite($newFile,$code);
 
