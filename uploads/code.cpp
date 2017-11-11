@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-	freopen("ip_10001","r",stdin);
-	freopen("user_op_10001","w",stdout);
-int a;
-for(int i=0; i<5; i++){
-	cin>>a;
-	cout<<(a%2==0?"YES\n":"NO\n");
-}
+	freopen("ip_10002","r",stdin);
+	freopen("user_op_10002","w",stdout);
+int a,b,c;
+cin>>a>>b>>c;
+cout<<10*a<<endl;
+cout<<100*b<<endl;
+cout<<10000*c<<endl;
 return 0;
 }
