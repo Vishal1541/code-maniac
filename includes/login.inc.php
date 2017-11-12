@@ -29,7 +29,9 @@
 						// Login the user here
 						$_SESSION["user"] = $row["HANDLE"];
 						$_SESSION["name"] = $row["FNAME"];
+						$_SESSION["lname"] = $row["LNAME"];
 						$_SESSION["institution"] = $row["INSTITUTION"];
+						$_SESSION["password"] = $row["PASSWORD"];
 						header("Location: ../index.php?login=success");
 						exit();
 					}

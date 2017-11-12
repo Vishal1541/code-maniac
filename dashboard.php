@@ -49,7 +49,7 @@
 		?>
 	</section>
 	<section>
-	<div class="maincontainer" style="height: 600px;">
+	<div class="maincontainer" style="height: 700px;">
 
 			<section id="main">
 			<div class="main">
@@ -62,6 +62,7 @@
 					<?php
 						$conn=mysqli_connect("localhost","root","","Project");
 						$handle = $_SESSION["user"];
+						$name = $_SESSION["name"].' '.$_SESSION["lname"];
 						$institution = $_SESSION["institution"];
 
 						$total = "SELECT * FROM Submissions WHERE HANDLE='$handle'";
@@ -95,8 +96,12 @@
 							$wa_per = 0;
 						}
 
-						echo "<div style=\"color: #180426; font-weight: bold; font-size: 50px;\">Welcome $handle</div>";
+						echo "<div style=\"color: #180426; font-weight: bold; font-size: 40px;\">Welcome $handle</div>";
+						echo "<div style=\"color: #ff5900; font-size: 15px;\">$name</div><br>";
 						echo "<div style=\"color: #ff5900; font-size: 15px;\">$institution</div><br>";
+						echo "<div style=\"color: blue; font-size: 15px;display: inline;\"><a href=\"updateInfo.php\">[ edit info ]</a><br>";
+						echo "<a href=\"changePassword.php\">[ change password ]</a><br>";
+						echo "<a href=\"tags.php\">[ customize  problem tags ]</a></div><br>";
 						echo "<div style=\"color: #ff5900; font-weight: bold; font-size: 35px;\">Statistics</div>";
 
 						echo "<table class='table_stats'>
@@ -150,7 +155,7 @@
 							</tr>
 							</thead>
 
-							<tbody style=\"height: 200px;\">";
+							<tbody style=\"height: 300px;\">";
 
 							while($row = mysqli_fetch_array($result))
 							{

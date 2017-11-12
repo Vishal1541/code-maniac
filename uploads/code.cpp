@@ -10,7 +10,7 @@ int main(){
 	cin>>a>>b>>c;
 	cout<<a*10<<endl;
 	cout<<b*10<<endl;
-	cout<<c*10<<endl;
+	cout<<c*20<<endl;
 
 	return 0;
 }

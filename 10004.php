@@ -76,6 +76,12 @@
 					<p>
 						0
 					</p>
+									
+				<?php
+					if(isset($_SESSION["user"])){						
+						include 'submit_button.php';
+					}
+				?>
 				</article>
 				<aside class="right">
 					<ol>

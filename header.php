@@ -13,7 +13,7 @@
 			<nav class="navbar">
 				<ul>
 					<li ><a href="index.php">Home</a></li>
-					<li><a href="about.php">About</a></li>
+					<li><a href="#">About</a></li>
 					<li><a href="probl.php">Problem Sets</a></li>
 					<li><a href="rankings.php">Rankings</a></li>
 					<?php
