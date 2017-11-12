@@ -76,7 +76,7 @@
 					<p>
 						0
 					</p>
-									
+
 				<?php
 					if(isset($_SESSION["user"])){						
 						include 'submit_button.php';
@@ -84,11 +84,25 @@
 				?>
 				</article>
 				<aside class="right">
+					<div class="prob_title">Constraints</div>
 					<ol>
-						<li>time limit per test - 2s</li>
+						<li>time limit per test - 1s</li>
 						<li>64 megabytes</li>
-						<li>input - standard input (stdin)</li>
-						<li>output - standard output (stdout)</li>
+						<li>input - standard input</li>
+						<li>output - standard output</li>
+					</ol>
+				</aside>
+				<aside class="right">
+					<div class="prob_title">Tags</div>
+					<ol>
+					<?php
+						$conn=mysqli_connect("localhost","root","","Project");
+						$sql = "SELECT * FROM Tags WHERE PROB_ID=10004";
+						$sql = mysqli_query($conn,$sql);
+						while($row = mysqli_fetch_array($sql)){
+							echo'<li>'.$row['TAG'].'</li>';
+						}
+					?>
 					</ol>
 				</aside>
 			</div>

@@ -18,7 +18,7 @@
 			include "header.php";
 		?>
 	</section>
-	<div class="maincontainer" style="height: 700px;">
+	<div class="maincontainer" style="height: 600px;">
 		
 		
 		<section id="main">

@@ -37,7 +37,8 @@
 				<article class="left">
 					<?php
 						$conn=mysqli_connect("localhost","root","","Project");
-						$result = mysqli_query($conn,"SELECT * FROM Problems");
+						$count = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM Problems"));
+						$result = mysqli_query($conn,"SELECT * FROM Problems ORDER BY RAND() LIMIT $count");
 						// echo '<div class="table>"';
 							echo "<table class='problems' border='1'>
 							<caption><h3><span class=\"highlightblue\">All Problems</span></h3></caption>

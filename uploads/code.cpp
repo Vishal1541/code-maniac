@@ -3,14 +3,14 @@
 using namespace std;
 
 int main(){
-	freopen("ip_10002","r",stdin);
-	freopen("user_op_10002","w",stdout);
+	freopen("ip_10003","r",stdin);
+	freopen("user_op_10003","w",stdout);
 
-	int a,b,c;
-	cin>>a>>b>>c;
-	cout<<a*10<<endl;
-	cout<<b*10<<endl;
-	cout<<c*20<<endl;
+	int a,b;
+        for(int i=0; i<4; i++){
+	cin>>a>>b;
+        cout<<a+b<<endl;
+        }
 
 	return 0;
 }
