@@ -76,6 +76,19 @@
 						<li>output - standard output</li>
 					</ol>
 				</aside>
+				<aside class="right">
+					<div class="prob_title">Tags</div>
+					<ol>
+					<?php
+						$conn=mysqli_connect("localhost","root","","Project");
+						$sql = "SELECT * FROM Tags WHERE PROB_ID=10001";
+						$sql = mysqli_query($conn,$sql);
+						while($row = mysqli_fetch_array($sql)){
+							echo'<li>'.$row['TAG'].'</li>';
+						}
+					?>
+					</ol>
+				</aside>
 			</div>
 		</section>
 	</div>
