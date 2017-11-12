@@ -1,5 +1,5 @@
 <?php
-	if(isset($_POST["b_add"]) || isset($_POST["b_remove"])){
+		session_start();
 		$conn = mysqli_connect("localhost","root","","Project");
 		$handle = $_SESSION['user'];
 		$prob_id = mysqli_real_escape_string($conn,$_POST["prob_id"]);
@@ -15,7 +15,6 @@
 		$sql = "SELECT * FROM Tags WHERE PROB_ID=$prob_id and TAG='$tag'";
 		$sql = mysqli_query($conn,$sql);
 		$sql = mysqli_num_rows($sql);
-	}
 	if(isset($_POST["b_add"])){
 		if($sql==0){
 			$sql = "INSERT INTO Tags VALUES($prob_id, '$tag')";
